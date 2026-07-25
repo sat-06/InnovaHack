@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --color-penny-green-50: #f0fdf4;
+  --color-penny-green-100: #dcfce7;
+  --color-penny-green-200: #bbf7d0;
+  --color-penny-green-300: #86efac;
+  --color-penny-green-400: #4ade80;
+  --color-penny-green-500: #22c55e;
+  --color-penny-green-600: #16a34a;
+  --color-penny-green-700: #15803d;
+  --color-penny-green-800: #166534;
+  --color-penny-green-900: #14532d;
+  --color-penny-blue-50: #eff6ff;
+  --color-penny-blue-100: #dbeafe;
+  --color-penny-blue-200: #bfdbfe;
+  --color-penny-blue-300: #93c5fd;
+  --color-penny-blue-400: #60a5fa;
+  --color-penny-blue-500: #3b82f6;
+  --color-penny-blue-600: #2563eb;
+  --color-penny-blue-700: #1d4ed8;
+  --color-penny-blue-800: #1e40af;
+  --color-penny-blue-900: #1e3a8a;
+}
+
+@layer base {
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #f8fafc;
+    color: #0f172a;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+}
+
+@layer utilities {
+  .animate-fade-in { animation: fadeIn 0.5s ease-out; }
+  .animate-slide-up { animation: slideUp 0.5s ease-out; }
+  .animate-slide-in-right { animation: slideInRight 0.4s ease-out; }
+  .animate-scale-in { animation: scaleIn 0.3s ease-out; }
+  .animate-pulse-slow { animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+  .animate-wave { animation: wave 1.5s ease-in-out infinite; }
+}
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes slideInRight { from { opacity: 0; transform: translateX(20px); } to { opacity: 1; transform: translateX(0); } }
+@keyframes scaleIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
+@keyframes wave { 0%, 100% { height: 4px; } 50% { height: 24px; } }
